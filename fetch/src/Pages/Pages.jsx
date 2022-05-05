@@ -10,7 +10,7 @@ import TouristOrLocal from "./TouristOrLocal";
 function Pages() {
   return (
     <Routes>
-      <Route path="/SignIn" element={<SignIn />} />
+      <Route path="/" element={<SignIn />} />
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/TouristOrLocal" element={<TouristOrLocal />} />
       <Route path="/Add" element={<Add />} />
