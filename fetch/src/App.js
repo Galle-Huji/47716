@@ -1,8 +1,25 @@
+import Container from "@mui/material/Container";
+import FixedBottomNavigation from "./Components/FixedBottomNavigation";
+import { BrowserRouter } from "react-router-dom";
+import Pages from "./Pages/Pages";
+import MenuAppBar from "./Components/MenuAppBar";
+
 function App() {
   return (
     <div className="App">
-      <h1>Fetch</h1>
-      <p>we won't stop trying to make fetch happen!</p>
+      <Container>
+        <BrowserRouter>
+          <MenuAppBar />
+          <Pages />
+          <FixedBottomNavigation
+            sx={{
+              width: "50%",
+              position: "fixed",
+              bottom: 0,
+            }}
+          />
+        </BrowserRouter>
+      </Container>
     </div>
   );
 }
