@@ -8,6 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import SingleChat from "../Components/SingleChat";
 import React, { useEffect, useState } from "react";
+import { Box, Paper } from "@mui/material";
 // import FakeJsonData from "../ChatsData.json";
 
 export default function AlignItemsList() {
@@ -26,25 +27,50 @@ export default function AlignItemsList() {
   console.log(ChatsData);
 
   return (
-    <List
-      sx={{
-        width: "100%",
-        bgcolor: "background.paper",
-        align: "center",
-      }}
-    >
-      {ChatsData.map((chat) => (
-        <div key={chat.ChatTitle}>
-          <SingleChat
-            ChatTitle={chat.ChatTitle}
-            ChatMembers={chat.ChatMembers}
-            LastMessege={chat.LastMessege}
-            ProfilePicture={chat.ProfilePicture}
-          />
-          <Divider variant="inset" component="li" />
-        </div>
-      ))}
-    </List>
+    <div>
+      <Box
+        sx={{
+          // TODO make static over list
+          display: "flex",
+          flexWrap: "wrap",
+          "& > :not(style)": {
+            m: 1,
+          },
+        }}
+      >
+        <Paper
+          sx={{
+            width: "100%",
+            bgcolor: "background.paper",
+            align: "center",
+          }}
+        >
+          <Typography variant="button" sx={{ textAlign: "center" }}>
+            Inbox({ChatsData.length})
+          </Typography>
+        </Paper>
+      </Box>
+
+      <List
+        sx={{
+          width: "100%",
+          bgcolor: "background.paper",
+          align: "center",
+        }}
+      >
+        {ChatsData.map((chat) => (
+          <div key={chat.ChatTitle}>
+            <SingleChat
+              ChatTitle={chat.ChatTitle}
+              ChatMembers={chat.ChatMembers}
+              LastMessege={chat.LastMessege}
+              ProfilePicture={chat.ProfilePicture}
+            />
+            <Divider variant="inset" component="li" />
+          </div>
+        ))}
+      </List>
+    </div>
   );
 }
 
