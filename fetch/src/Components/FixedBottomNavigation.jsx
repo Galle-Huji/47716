@@ -38,7 +38,7 @@ export default function FixedBottomNavigation() {
             label="Browse"
             icon={<Groups />}
             component={Link}
-            to="/"
+            to="/Browse"
           />{" "}
           <BottomNavigationAction
             label="Chats"
