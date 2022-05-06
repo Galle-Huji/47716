@@ -14,7 +14,7 @@ function Pages() {
       <Route path="/TouristOrLocal" element={<TouristOrLocal />} />
       <Route path="/Add" element={<Add />} />
       <Route path="/Browse" element={<Browse />} />
-      <Route path="/Chats" element={<Chats />} />>
+      <Route path="/Chats" element={<Chats />} />
     </Routes>
   );
 }
