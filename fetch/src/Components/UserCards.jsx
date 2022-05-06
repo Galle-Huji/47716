@@ -48,10 +48,12 @@ export default function UserCards() {
 
   return (
     <Card sx={{ maxWidth: 300 }}>
+      <box>
       <CardHeader
-        title="Erez Bbbbbitan"
+        title="Erez Bitan"
         subheader="September 14, 2016"
       />
+      </box>
       <CardMedia
         component="img"
         height="194"
