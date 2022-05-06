@@ -11,16 +11,14 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import Drawer from '@mui/material/Drawer';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import Divider from '@mui/material/Divider';
-
-
+import Drawer from "@mui/material/Drawer";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import MailIcon from "@mui/icons-material/Mail";
+import Divider from "@mui/material/Divider";
 
 export default function MenuAppBar(props) {
   const [auth, setAuth] = React.useState(true);
@@ -50,7 +48,7 @@ export default function MenuAppBar(props) {
       <Toolbar />
       <Divider />
       <List>
-        {['My Meetings', 'My Additions', 'Change City'].map((text, index) => (
+        {["My Meetings", "My Additions", "Change City"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -61,7 +59,7 @@ export default function MenuAppBar(props) {
       </List>
       <Divider />
       <List>
-        {['About Us', 'Contact Us', 'This and That'].map((text, index) => (
+        {["About Us", "Contact Us", "This and That"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -72,10 +70,9 @@ export default function MenuAppBar(props) {
       </List>
     </div>
   );
-  
-  const container = window !== undefined ? () => window().document.body : undefined;
 
-
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -145,6 +142,7 @@ export default function MenuAppBar(props) {
           )}
         </Toolbar>
       </AppBar>
+      <Toolbar /> {/* DO NOT REMOVE, keeps page content below app bar. */}
       <Box
         component="nav"
         sx={{ width: { sm: 240 }, flexShrink: { sm: 0 } }}
@@ -160,8 +158,8 @@ export default function MenuAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
           }}
         >
           {drawer}
@@ -170,5 +168,3 @@ export default function MenuAppBar(props) {
     </Box>
   );
 }
-
-
