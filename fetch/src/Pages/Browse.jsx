@@ -1,8 +1,8 @@
 import React from "react";
-import MeetingCard from "../Components/MeetingCard";
+import UserCards from "../Components/UserCards";
 
 function Browse() {
-  return <MeetingCard />;
+  return <UserCards />;
 }
 
 export default Browse;
