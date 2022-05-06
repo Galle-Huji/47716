@@ -1,0 +1,70 @@
+{
+  "Chats": [
+    {
+      "ChatTitle": "Fetch a beer @ city center",
+      "ChatMembers": "Eitan",
+      "LastMessege": " - See you There!",
+      "ProfilePicture": "./FakeData/avatars/John.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a museum visit @ IMJ",
+      "ChatMembers": "Avigail",
+      "LastMessege": " - Sure",
+      "ProfilePicture": "./FakeData/avatars/Avigail.jpg"
+    },
+    {
+      "ChatTitle": "Fetch dinner @ city center",
+      "ChatMembers": "Gal",
+      "LastMessege": " - Honeydew does belong in a fruit salad",
+      "ProfilePicture": "./FakeData/avatars/Gal.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a coffee @ city center",
+      "ChatMembers": "Inbar",
+      "LastMessege": " -  I buy the gourmet expensive stuff",
+      "ProfilePicture": "./FakeData/avatars/Inbar.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a workout @ YMCA",
+      "ChatMembers": "Eran",
+      "LastMessege": " - On Wednesdays I do legs",
+      "ProfilePicture": "./FakeData/avatars/Eran.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a beer @ WineBar",
+      "ChatMembers": "Yoav",
+      "LastMessege": " - Cool, LMK",
+      "ProfilePicture": "./FakeData/avatars/Yoav.jpg"
+    },
+    {
+      "ChatTitle": "Fetch breakfast @ Talbiya",
+      "ChatMembers": "Hadar",
+      "LastMessege": " - Around 10-ish",
+      "ProfilePicture": "img source"
+    },
+    {
+      "ChatTitle": "Fetch a bowling game",
+      "ChatMembers": "Omri",
+      "LastMessege": " - Okay, cool. Call me when you're there",
+      "ProfilePicture": "img source"
+    },
+    {
+      "ChatTitle": "Fetch a pool game @ City center",
+      "ChatMembers": "Ben",
+      "LastMessege": " - loser buys the winner a drink",
+      "ProfilePicture": "./FakeData/avatars/Ben.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a workout @ HaBlock",
+      "ChatMembers": "Bar",
+      "LastMessege": " - Nobody reads this one before last message anyway",
+      "ProfilePicture": "./FakeData/avatars/Bar.jpg"
+    },
+    {
+      "ChatTitle": "Fetch a party @ City center",
+      "ChatMembers": "Netta",
+      "LastMessege": " - Text me what you'll be wearing so I can recognize you",
+      "ProfilePicture": "./FakeData/avatars/Netta.jpg"
+    }
+  ]
+}
