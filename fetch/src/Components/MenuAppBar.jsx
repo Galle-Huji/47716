@@ -19,7 +19,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Divider from "@mui/material/Divider";
-
+import { Grid } from "@mui/material";
 export default function MenuAppBar(props) {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -90,56 +90,63 @@ export default function MenuAppBar(props) {
       </FormGroup> */}
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleDrawerToggle}
-            onClose={handleDrawerToggle}
-            sx={{ mr: -4 }} // find a better way to center
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            align="center"
-            sx={{ flexGrow: 1 }}
-          >
-            Fetch
-          </Typography>
-          {auth && (
-            <div>
+            <Grid xs={1} item>
               <IconButton
                 size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
+                edge="start"
                 color="inherit"
+                aria-label="menu"
+                onClick={handleDrawerToggle}
+                onClose={handleDrawerToggle}
               >
-                <AccountCircle />
+                <MenuIcon />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
+            </Grid>
+            <Grid xs={2} item>
+              <img src="./FakeData/Bolt_logo.svg" alt="" />
+            </Grid>
+            <Grid xs={1} item>
+              {auth && (
+                <div>
+                  <Box mr={1}>
+                    <IconButton
+                      size="large"
+                      aria-label="account of current user"
+                      aria-controls="menu-appbar"
+                      aria-haspopup="true"
+                      color="inherit"
+                    >
+                      <AccountCircle />
+                    </IconButton>
+                  </Box>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                  >
+                    {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem> */}
-              </Menu>
-            </div>
-          )}
+                  </Menu>
+                </div>
+              )}
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Toolbar /> {/* DO NOT REMOVE, keeps page content below app bar. */}
