@@ -1,0 +1,24 @@
+{
+  "ProfilePictures": [
+    {
+      "PictureTitle": "Gal",
+      "Type": ".jpg",
+      "Path": "./FakeData/avatars/Gal.jpg"
+    },
+    {
+      "PictureTitle": "Yoav",
+      "Type": ".jpg",
+      "Path": "./FakeData/avatars/Yoav.jpg"
+    },
+    {
+      "PictureTitle": "Inbar",
+      "Type": ".jpg",
+      "Path": "./FakeData/avatars/Inbar.jpg"
+    },
+    {
+      "PictureTitle": "Hadar",
+      "Type": ".jpg",
+      "Path": "./FakeData/avatars/Hadar.jpg"
+    }
+  ]
+}
