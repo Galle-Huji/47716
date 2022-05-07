@@ -152,6 +152,59 @@ export default function UserCards() {
             label="Fetch me for anything"
           />
         </Box>
+        <Box
+          sx={{
+            margin: 0.5,
+            width: 0.999,
+            //  border: 1,
+            p: 1,
+            display: "block",
+          }}
+        >
+          <Chip
+            icon={<CoffeeIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Coffee"
+          />
+          <Chip
+            icon={<SportsBarIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Beers"
+            padding={10}
+          />
+          <Chip
+            icon={<FitnessCenterIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Workout"
+          />
+          <Chip
+            icon={<AccountBalanceIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Attraction"
+          />
+          <Chip
+            icon={<DinnerDiningIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Eating out"
+          />
+          <Chip
+            icon={<StorefrontIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Market"
+          />
+          <Chip
+            icon={<ThumbUpIcon />}
+            sx={{ m: 0.5 }}
+            size="small"
+            label="Anything"
+          />
+        </Box>
       </CardContent>
       <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
         <CardActions disableSpacing>
