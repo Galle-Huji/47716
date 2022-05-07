@@ -10,7 +10,16 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
-
+import Dialog from "@mui/material/Dialog";
+import CoffeeIcon from "@mui/icons-material/Coffee";
+import SportsBarIcon from "@mui/icons-material/SportsBar";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import StorefrontIcon from "@mui/icons-material/Storefront";
+import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import PropTypes from "prop-types";
+import ProfileCard from "./ProfileCard";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import SportsBarIcon from "@mui/icons-material/SportsBar";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
@@ -32,6 +41,19 @@ import ActivityChip from "./ActivityChip";
 //   }),
 // }));
 
+// export default function UserCards({
+//   Name,
+//   Age,
+//   LastSeen,
+//   ProfilePicture,
+//   Activities,
+//   Id,
+// }) {
+// const [expanded, setExpanded] = React.useState(false);
+// const handleExpandClick = () => {
+//   setExpanded(!expanded);
+// };
+
 export default function UserCards({
   Name,
   Age,
@@ -40,10 +62,51 @@ export default function UserCards({
   Activities,
   Id,
 }) {
-  // const [expanded, setExpanded] = React.useState(false);
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
+  const [expanded, setExpanded] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }));
+
+  function SimpleDialog(props) {
+    const { onClose, selectedValue, open } = props;
+
+    const handleClose = () => {
+      onClose(selectedValue);
+    };
+
+    return (
+      <Dialog onClose={handleClose} open={open}>
+        <ProfileCard />
+      </Dialog>
+    );
+  }
+
+  SimpleDialog.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+  };
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+  };
 
   return (
     <ListItem>
@@ -64,6 +127,14 @@ export default function UserCards({
           sx={{ justifyContent: "space-between" }}
         > */}
         <CardHeader title={Name} subheader={`Last seen: ${LastSeen}`} />
+        {/* <Card sx={{ maxWidth: 350 }}>
+      <box
+        display="inline-block"
+        gridTemplateColumns="repeat(auto-fill.50px)"
+        gap={2}
+        sx={{ justifyContent: "space-between" }}
+      >
+        <CardHeader title="Erez Segev" subheader="September 14, 2016" /> */}
         <Typography
           mr={3}
           sx={{
@@ -106,6 +177,7 @@ export default function UserCards({
               Get To Know Me
             </Button>
           </CardActions>
+          <SimpleDialog open={open} onClose={handleClose} />
         </Box>
       </Card>
     </ListItem>
