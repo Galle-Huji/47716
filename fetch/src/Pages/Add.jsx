@@ -1,9 +1,10 @@
 import { Card } from "@mui/material";
 import React from "react";
-import AddForm from "../Components/AddForm";
+// import AddForm from "../Components/AddForm";
 
 function Add() {
-  return <AddForm />;
+  <div>ADD</div>;
+  // return <AddForm />;
 }
 
 export default Add;
