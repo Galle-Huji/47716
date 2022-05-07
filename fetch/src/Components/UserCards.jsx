@@ -98,51 +98,6 @@ export default function UserCards({
             {Activities.map((activity) => (
               <ActivityChip activity={activity} />
             ))}
-
-            {/* // <Chip
-            //   icon={<CoffeeIcon />}
-            //   sx={{ m: 0.5 }}
-            //   size="small"
-            //   label="Coffee"
-            // /> */}
-
-            {/* <Chip
-              icon={<SportsBarIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Beers"
-              padding={10}
-            />
-            <Chip
-              icon={<FitnessCenterIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Workout"
-            />
-            <Chip
-              icon={<AccountBalanceIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Attraction"
-            />
-            <Chip
-              icon={<DinnerDiningIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Eating out"
-            />
-            <Chip
-              icon={<StorefrontIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Market"
-            />
-            <Chip
-              icon={<ThumbUpIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Anything"
-            /> */}
           </Box>
         </CardContent>
         <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
