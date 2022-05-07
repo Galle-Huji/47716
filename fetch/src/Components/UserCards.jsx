@@ -19,6 +19,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import { ListItem } from "@mui/material";
+import ActivityChip from "./ActivityChip";
 
 // const ExpandMore = styled((props) => {
 //   const { expand, ...other } = props;
@@ -46,7 +47,16 @@ export default function UserCards({
 
   return (
     <ListItem>
-      <Card sx={{ maxWidth: 350 }}>
+      <Card
+        sx={{
+          maxWidth: 350,
+          margin: 0.5,
+          width: 0.999,
+          // border: 1,
+          p: 1,
+          display: "block",
+        }}
+      >
         {/* <box
           display="inline-block"
           gridTemplateColumns="repeat(auto-fill.50px)"
@@ -85,13 +95,18 @@ export default function UserCards({
               display: "block",
             }}
           >
-            <Chip
-              icon={<CoffeeIcon />}
-              sx={{ m: 0.5 }}
-              size="small"
-              label="Coffee"
-            />
-            <Chip
+            {Activities.map((activity) => (
+              <ActivityChip activity={activity} />
+            ))}
+
+            {/* // <Chip
+            //   icon={<CoffeeIcon />}
+            //   sx={{ m: 0.5 }}
+            //   size="small"
+            //   label="Coffee"
+            // /> */}
+
+            {/* <Chip
               icon={<SportsBarIcon />}
               sx={{ m: 0.5 }}
               size="small"
@@ -127,7 +142,7 @@ export default function UserCards({
               sx={{ m: 0.5 }}
               size="small"
               label="Anything"
-            />
+            /> */}
           </Box>
         </CardContent>
         <Box display="flex" justifyContent="center" alignItems="center" mb={2}>

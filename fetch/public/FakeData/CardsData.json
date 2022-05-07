@@ -5,7 +5,7 @@
       "Age": "25",
       "LastSeen": "07/05/2022",
       "ProfilePicture": "./FakeData/avatars/Gal.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Coffee", "Beers", "Eating"],
       "Id": "001"
     },
     {
@@ -13,7 +13,7 @@
       "Age": "21",
       "LastSeen": "06/05/2022",
       "ProfilePicture": "./FakeData/imgs/Trung.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Anything"],
       "Id": "002"
     },
     {
@@ -21,7 +21,7 @@
       "Age": "31",
       "LastSeen": "04/05/2022",
       "ProfilePicture": "./FakeData/imgs/Dan.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Workout", "Beers", "Attraction"],
       "Id": "003"
     },
     {
@@ -29,7 +29,7 @@
       "Age": "27",
       "LastSeen": "03/05/2022",
       "ProfilePicture": "./FakeData/imgs/Ahmed.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Market", "Eating", "Coffee"],
       "Id": "004"
     },
     {
@@ -37,7 +37,7 @@
       "Age": "24",
       "LastSeen": "03/05/2022",
       "ProfilePicture": "./FakeData/imgs/Eden.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Workout", "Eating"],
       "Id": "005"
     },
     {
@@ -45,7 +45,7 @@
       "Age": "22",
       "LastSeen": "02/05/2022",
       "ProfilePicture": "./FakeData/imgs/Susanna.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Anything"],
       "Id": "006"
     },
     {
@@ -53,7 +53,7 @@
       "Age": "28",
       "LastSeen": "28/04/2022",
       "ProfilePicture": "./FakeData/imgs/Tina.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Coffee", "Beers", "Workout", "Market"],
       "Id": "007"
     },
     {
@@ -61,7 +61,7 @@
       "Age": "30",
       "LastSeen": "27/04/2022",
       "ProfilePicture": "./FakeData/imgs/Panitan.jpg",
-      "Activities": ["coffee", "beers"],
+      "Activities": ["Coffee", "Workout", "Market"],
       "Id": "008"
     }
   ]
