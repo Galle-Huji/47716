@@ -20,39 +20,39 @@ import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import PropTypes from "prop-types";
 import ProfileCard from "./ProfileCard";
-import CoffeeIcon from "@mui/icons-material/Coffee";
-import SportsBarIcon from "@mui/icons-material/SportsBar";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-import StorefrontIcon from "@mui/icons-material/Storefront";
-import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import { ListItem } from "@mui/material";
 import ActivityChip from "./ActivityChip";
 
-// const ExpandMore = styled((props) => {
-//   const { expand, ...other } = props;
-//   return <IconButton {...other} />;
-// })(({ theme, expand }) => ({
-//   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-//   marginLeft: 'auto',
-//   transition: theme.transitions.create('transform', {
-//     duration: theme.transitions.duration.shortest,
-//   }),
-// }));
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
 
-// export default function UserCards({
-//   Name,
-//   Age,
-//   LastSeen,
-//   ProfilePicture,
-//   Activities,
-//   Id,
-// }) {
-// const [expanded, setExpanded] = React.useState(false);
-// const handleExpandClick = () => {
-//   setExpanded(!expanded);
-// };
+function SimpleDialog(props) {
+  const { onClose, selectedValue, open } = props;
+
+  const handleClose = () => {
+    onClose(selectedValue);
+  };
+
+  return (
+    <Dialog onClose={handleClose} open={open}>
+      <ProfileCard />
+    </Dialog>
+  );
+}
+
+SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  selectedValue: PropTypes.string.isRequired,
+};
 
 export default function UserCards({
   Name,
@@ -64,37 +64,6 @@ export default function UserCards({
 }) {
   const [expanded, setExpanded] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-
-  const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  }));
-
-  function SimpleDialog(props) {
-    const { onClose, selectedValue, open } = props;
-
-    const handleClose = () => {
-      onClose(selectedValue);
-    };
-
-    return (
-      <Dialog onClose={handleClose} open={open}>
-        <ProfileCard />
-      </Dialog>
-    );
-  }
-
-  SimpleDialog.propTypes = {
-    onClose: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    selectedValue: PropTypes.string.isRequired,
-  };
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -173,7 +142,7 @@ export default function UserCards({
         </CardContent>
         <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
           <CardActions disableSpacing>
-            <Button variant="outlined" align="center">
+            <Button variant="outlined" align="center" onClick={handleClickOpen}>
               Get To Know Me
             </Button>
           </CardActions>
