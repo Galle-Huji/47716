@@ -1,7 +1,10 @@
+import { Card } from "@mui/material";
 import React from "react";
+// import AddForm from "../Components/AddForm";
 
 function Add() {
-  return <div>Add new 'fetch' event page</div>;
+  <div>ADD</div>;
+  // return <AddForm />;
 }
 
 export default Add;

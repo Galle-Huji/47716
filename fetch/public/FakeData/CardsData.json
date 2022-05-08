@@ -1,0 +1,68 @@
+{
+  "Cards": [
+    {
+      "UserName": "Brooke",
+      "Age": "25",
+      "LastSeen": "07/05/2022",
+      "ProfilePicture": "./FakeData/avatars/Gal.jpg",
+      "Activities": ["Coffee", "Beers", "Eating"],
+      "Id": "001"
+    },
+    {
+      "UserName": "Trung",
+      "Age": "21",
+      "LastSeen": "06/05/2022",
+      "ProfilePicture": "./FakeData/imgs/Trung.jpg",
+      "Activities": ["Anything"],
+      "Id": "002"
+    },
+    {
+      "UserName": "Dan",
+      "Age": "31",
+      "LastSeen": "04/05/2022",
+      "ProfilePicture": "./FakeData/imgs/Dan.jpg",
+      "Activities": ["Workout", "Beers", "Attraction"],
+      "Id": "003"
+    },
+    {
+      "UserName": "Ahmed",
+      "Age": "27",
+      "LastSeen": "03/05/2022",
+      "ProfilePicture": "./FakeData/imgs/Ahmed.jpg",
+      "Activities": ["Market", "Eating", "Coffee"],
+      "Id": "004"
+    },
+    {
+      "UserName": "Eden",
+      "Age": "24",
+      "LastSeen": "03/05/2022",
+      "ProfilePicture": "./FakeData/imgs/Eden.jpg",
+      "Activities": ["Workout", "Eating"],
+      "Id": "005"
+    },
+    {
+      "UserName": "Susanna",
+      "Age": "22",
+      "LastSeen": "02/05/2022",
+      "ProfilePicture": "./FakeData/imgs/Susanna.jpg",
+      "Activities": ["Anything"],
+      "Id": "006"
+    },
+    {
+      "UserName": "Tina",
+      "Age": "28",
+      "LastSeen": "28/04/2022",
+      "ProfilePicture": "./FakeData/imgs/Tina.jpg",
+      "Activities": ["Coffee", "Beers", "Workout", "Market"],
+      "Id": "007"
+    },
+    {
+      "UserName": "Panitan",
+      "Age": "30",
+      "LastSeen": "27/04/2022",
+      "ProfilePicture": "./FakeData/imgs/Panitan.jpg",
+      "Activities": ["Coffee", "Workout", "Market"],
+      "Id": "008"
+    }
+  ]
+}
