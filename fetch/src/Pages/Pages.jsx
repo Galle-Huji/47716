@@ -18,6 +18,8 @@ function Pages() {
       <Route path="/Chats" element={<Chats />} />
       <Route path="/CitySelect" element={<CitySelect />} />
       <Route path="/Chat" element={<Chat />} />
+      <Route path="/CitySelect" element={<CitySelect />} />
+      <Route path="/Meeting" element={<Meeting />} />
     </Routes>
   );
 }
