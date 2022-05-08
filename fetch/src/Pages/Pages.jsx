@@ -6,7 +6,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import TouristOrLocal from "./TouristOrLocal";
 import CitySelect from "./CitySelect";
-
+import Chat from "./Chat";
 function Pages() {
   return (
     <Routes>
@@ -16,7 +16,8 @@ function Pages() {
       <Route path="/Add" element={<Add />} />
       <Route path="/Browse" element={<Browse />} />
       <Route path="/Chats" element={<Chats />} />
-      <Route path= "/CitySelect" element={<CitySelect />} />
+      <Route path="/CitySelect" element={<CitySelect />} />
+      {/* <Route path="/Chat" element={<Chat />} /> */}
     </Routes>
   );
 }
