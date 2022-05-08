@@ -59,12 +59,14 @@ export default function Chats() {
         }}
       >
         {ChatsData.map((chat) => (
-          <div key={chat.ChatTitle}>
+          <div key={chat.ChatTitle}
+          onClick= {event =>  window.location.href='/chat'}>
             <SingleChat
               ChatTitle={chat.ChatTitle}
               ChatMembers={chat.ChatMembers}
               LastMessege={chat.LastMessege}
               ProfilePicture={chat.ProfilePicture}
+              
             />
             <Divider variant="inset" component="li" />
           </div>
