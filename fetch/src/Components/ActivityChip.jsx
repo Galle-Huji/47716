@@ -21,8 +21,8 @@ let iconDict = {
 function ActivityChip({ activity }) {
   return (
     <Chip
+      color="error"
       icon={iconDict[activity]}
-      // icon={<ThumbUpIcon />}
       sx={{ m: 0.5 }}
       size="small"
       label={activity}

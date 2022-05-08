@@ -110,7 +110,7 @@ export default function MenuAppBar(props) {
               </IconButton>
             </Grid>
             <Grid xs={2} item>
-              <img src="./FakeData/Bolt_logo.svg" alt="" />
+              <img src="./logo.png" alt="" width="70" height="auto" />
             </Grid>
             <Grid xs={1} item>
               {auth && (
