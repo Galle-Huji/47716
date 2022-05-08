@@ -2,7 +2,6 @@ import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import SendIcon from "@mui/icons-material/Send";
 import {
   ChatContainer,
-  MainContainer,
   MessageList,
   Message,
   MessageInput,
