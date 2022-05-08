@@ -5,6 +5,8 @@ import Add from "./Add";
 import SignIn from "./SignIn";
 import TouristOrLocal from "./TouristOrLocal";
 import CitySelect from "./CitySelect";
+import Meeting from "./Meeting";
+import Profile from "./Profile"
 
 function Pages() {
   return (
@@ -15,6 +17,8 @@ function Pages() {
       <Route path="/Browse" element={<Browse />} />
       <Route path="/Chats" element={<Chats />} />
       <Route path= "/CitySelect" element={<CitySelect />} />
+      <Route path="/Meeting" element={<Meeting/>} />
+      <Route path="/Profile" element={<Profile/>} />
     </Routes>
   );
 }

@@ -122,6 +122,7 @@ export default function MenuAppBar(props) {
                       aria-controls="menu-appbar"
                       aria-haspopup="true"
                       color="inherit"
+                      component={Link} to="/Profile"
                     >
                       <AccountCircle />
                     </IconButton>
