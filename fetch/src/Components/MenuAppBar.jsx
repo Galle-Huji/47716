@@ -20,8 +20,12 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Divider from "@mui/material/Divider";
 import { Grid } from "@mui/material";
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> c08b79e6afc9f64917fb6c6492280c1c90f71138
 
 export default function MenuAppBar(props) {
   const [auth, setAuth] = React.useState(true);
@@ -112,7 +116,7 @@ export default function MenuAppBar(props) {
               </IconButton>
             </Grid>
             <Grid xs={2} item>
-              <img src="./FakeData/Bolt_logo.svg" alt="" />
+              <img src="./logo.png" alt="" width="70" height="auto" />
             </Grid>
             <Grid xs={1} item>
               {auth && (

@@ -114,7 +114,7 @@ function ProfileCard() {
           </List>
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center">
-          <Button component={Link} to="/chats" variant="contained">
+          <Button component={Link} to="/chat" variant="contained">
             Fetch Chat!
           </Button>
         </Box>
