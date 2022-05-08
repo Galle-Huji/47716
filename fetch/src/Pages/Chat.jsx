@@ -1,7 +1,6 @@
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import SendIcon from "@mui/icons-material/Send";
 import {
-  MainContainer,
   ChatContainer,
   MessageList,
   Message,
@@ -211,6 +210,7 @@ function Chat() {
         variant="extended"
         color="secondary"
         aria-label="add"
+        onClick= {event =>  window.location.href='/Meeting'}
         sx={{
           position: "fixed",
           top: 75,
