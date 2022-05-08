@@ -34,24 +34,24 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
+function OpenProfileDialog(props) {
+  const { onClose, userId, open } = props;
 
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose();
   };
 
   return (
-    <Dialog onClose={handleClose} open={open}>
-      <ProfileCard />
+    <Dialog open={open} onClose={handleClose}>
+      <ProfileCard userId={userId} />
     </Dialog>
   );
 }
 
-SimpleDialog.propTypes = {
+OpenProfileDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
+  userId: PropTypes.string.isRequired,
 };
 
 export default function UserCards({
@@ -60,10 +60,11 @@ export default function UserCards({
   LastSeen,
   ProfilePicture,
   Activities,
-  Id,
+  UserId,
 }) {
   const [expanded, setExpanded] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+  const [userId, setUserId] = React.useState(UserId);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -71,11 +72,14 @@ export default function UserCards({
 
   const handleClickOpen = () => {
     setOpen(true);
+    setUserId(UserId);
   };
 
   const handleClose = (value) => {
     setOpen(false);
   };
+
+  console.log(`UserId: ${UserId}, name: ${Name}`);
 
   return (
     <ListItem>
@@ -146,7 +150,11 @@ export default function UserCards({
               Get To Know Me
             </Button>
           </CardActions>
-          <SimpleDialog open={open} onClose={handleClose} />
+          <OpenProfileDialog
+            open={open}
+            onClose={handleClose}
+            userId={userId}
+          />
         </Box>
       </Card>
     </ListItem>

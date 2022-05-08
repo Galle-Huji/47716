@@ -1,12 +1,15 @@
 {
-  "Cards": [
+  "Users": [
     {
       "UserName": "Brooke",
       "Age": "25",
       "LastSeen": "07/05/2022",
-      "ProfilePicture": "./FakeData/avatars/Gal.jpg",
+      "ProfilePicture": "./FakeData/imgs/Brooke.jpg",
       "Activities": ["Coffee", "Beers", "Eating"],
-      "Id": "001"
+      "UserId": "001",
+      "Bio": "I like meeting new people and love traveling, art, and making music! I just moved to JLM with my new job. Coffee and chat would be great.",
+      "Hobbies": ["Traveling", "Art", "Music", "Sports"],
+      "History": ["• Coffe with Yoav", "• Beer with Trung"]
     },
     {
       "UserName": "Trung",
@@ -14,7 +17,10 @@
       "LastSeen": "06/05/2022",
       "ProfilePicture": "./FakeData/imgs/Trung.jpg",
       "Activities": ["Anything"],
-      "Id": "002"
+      "UserId": "002",
+      "Bio": "I love beers, weed and everything about new media and society. Fetch for a beer if you have Mark Zuckerberg!",
+      "Hobbies": ["Beer", "Weed", "Netflix", "Art"],
+      "History": ["• Beer with Brooke"]
     },
     {
       "UserName": "Dan",
@@ -22,7 +28,10 @@
       "LastSeen": "04/05/2022",
       "ProfilePicture": "./FakeData/imgs/Dan.jpg",
       "Activities": ["Workout", "Beers", "Attraction"],
-      "Id": "003"
+      "UserId": "003",
+      "Bio": "I want to talk about soccer only",
+      "Hobbies": ["Working out", "Soccer"],
+      "History": ["Dan havn't made Fetch happen, yet."]
     },
     {
       "UserName": "Ahmed",
@@ -30,7 +39,10 @@
       "LastSeen": "03/05/2022",
       "ProfilePicture": "./FakeData/imgs/Ahmed.jpg",
       "Activities": ["Market", "Eating", "Coffee"],
-      "Id": "004"
+      "UserId": "004",
+      "Bio": "I love great tea and coffee (don't drink alcohol). Sports expert, front end developer by day and a Netflix potato by night.",
+      "Hobbies": ["Coffee", "Tea", "Sports", "Netflix"],
+      "History": ["• Worked out with Eric"]
     },
     {
       "UserName": "Eden",
@@ -38,7 +50,10 @@
       "LastSeen": "03/05/2022",
       "ProfilePicture": "./FakeData/imgs/Eden.jpg",
       "Activities": ["Workout", "Eating"],
-      "Id": "005"
+      "UserId": "005",
+      "Bio": "",
+      "Hobbies": [],
+      "History": []
     },
     {
       "UserName": "Susanna",
@@ -46,7 +61,10 @@
       "LastSeen": "02/05/2022",
       "ProfilePicture": "./FakeData/imgs/Susanna.jpg",
       "Activities": ["Anything"],
-      "Id": "006"
+      "UserId": "006",
+      "Bio": "",
+      "Hobbies": [],
+      "History": []
     },
     {
       "UserName": "Tina",
@@ -54,7 +72,10 @@
       "LastSeen": "28/04/2022",
       "ProfilePicture": "./FakeData/imgs/Tina.jpg",
       "Activities": ["Coffee", "Beers", "Workout", "Market"],
-      "Id": "007"
+      "UserId": "007",
+      "Bio": "",
+      "Hobbies": [],
+      "History": []
     },
     {
       "UserName": "Panitan",
@@ -62,7 +83,10 @@
       "LastSeen": "27/04/2022",
       "ProfilePicture": "./FakeData/imgs/Panitan.jpg",
       "Activities": ["Coffee", "Workout", "Market"],
-      "Id": "008"
+      "UserId": "008",
+      "Bio": "",
+      "Hobbies": [],
+      "History": []
     }
   ]
 }
