@@ -1,5 +1,5 @@
 import React from 'react'
-import MyMap from '../Components/Map'
+// import MyMap from '../Components/Map'
 import Box from '@mui/material/Box';
 import { Typography } from "@mui/material";
 import TimeDatePick from '../Components/TimeDatePick';
@@ -9,8 +9,10 @@ import { Dialog } from '@mui/material';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
+import CardMedia from "@mui/material/CardMedia";
+
+
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -45,7 +47,11 @@ export default function Meeting() {
             </Typography>
 
             <Box paddingTop="1vh" display="flex" flexDirection="column" >
-                <MyMap />
+                {/* <MyMap /> */}
+                <CardMedia
+                component="img"
+                height="200"
+                 image={'.\\thestupidmap.jpg'}></CardMedia>
             </Box>
 
             <Typography
@@ -130,13 +136,11 @@ export default function Meeting() {
               </DialogActions>
             </Dialog>
           
-      </Box>
-
-
-
         </Box>
+
+
+
+      </Box>
     )
 
 };
-
-
