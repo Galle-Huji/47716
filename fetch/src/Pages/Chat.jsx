@@ -211,6 +211,7 @@ function Chat() {
         variant="extended"
         color="secondary"
         aria-label="add"
+        onClick= {event =>  window.location.href='/Meeting'}
         sx={{
           position: "fixed",
           top: 75,

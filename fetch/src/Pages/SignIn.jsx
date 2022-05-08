@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,27 +10,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
-=======
-import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
->>>>>>> c08b79e6afc9f64917fb6c6492280c1c90f71138
 import { FacebookLoginButton } from "react-social-login-buttons";
 import { InstagramLoginButton } from "react-social-login-buttons";
 import styled, { css } from "styled-components";
+import { WindowsFilled } from '@ant-design/icons';
 
 function Copyright(props) {
   return (
@@ -102,8 +84,8 @@ export default function SignIn() {
               <Grid item xs>
                 <Box mb={2}>
                   <FacebookLoginButton
+                  onClick= {event =>  window.location.href='/citySelect'}
                     align="center"
-                    onClick={() => alert("Hello")}
                   >
                     <span>Sign in with Facebook</span>
                   </FacebookLoginButton>
@@ -111,7 +93,7 @@ export default function SignIn() {
 
                 <InstagramLoginButton
                   align="center"
-                  onClick={() => alert("Hello")}
+                  onClick= {event =>  window.location.href='/citySelect'}
                 >
                   <span>Sign in with Instagram</span>
                 </InstagramLoginButton>
