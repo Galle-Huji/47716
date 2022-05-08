@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
 
 export default function FixedBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
   const ref = React.useRef(null);
 
   return (

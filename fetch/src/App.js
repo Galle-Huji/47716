@@ -4,14 +4,20 @@ import { BrowserRouter } from "react-router-dom";
 import Pages from "./Pages/Pages";
 import MenuAppBar from "./Components/MenuAppBar";
 import { createTheme, colors, ThemeProvider } from "@mui/material";
-
 const theme = createTheme({
   palette: {
-    primary: {
-      main: colors.orange[400],
-    },
+    primary: { main: "#ee964bff" },
+    secondary: { main: "#4ba3ee" },
   },
 });
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: colors.orange[200],
+//     },
+//     secondary: colors.blue,
+//   },
+// });
 
 function App() {
   return (
