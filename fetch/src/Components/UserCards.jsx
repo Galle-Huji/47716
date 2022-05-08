@@ -20,6 +20,8 @@ import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import PropTypes from "prop-types";
 import ProfileCard from "./ProfileCard";
+import { ListItem } from "@mui/material";
+import ActivityChip from "./ActivityChip";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -52,7 +54,14 @@ SimpleDialog.propTypes = {
   selectedValue: PropTypes.string.isRequired,
 };
 
-export default function UserCards() {
+export default function UserCards({
+  Name,
+  Age,
+  LastSeen,
+  ProfilePicture,
+  Activities,
+  Id,
+}) {
   const [expanded, setExpanded] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
@@ -69,14 +78,32 @@ export default function UserCards() {
   };
 
   return (
-    <Card sx={{ maxWidth: 350 }}>
+    <ListItem>
+      <Card
+        sx={{
+          maxWidth: 350,
+          margin: 0.5,
+          width: 0.999,
+          // border: 1,
+          p: 1,
+          display: "block",
+        }}
+      >
+        {/* <box
+          display="inline-block"
+          gridTemplateColumns="repeat(auto-fill.50px)"
+          gap={2}
+          sx={{ justifyContent: "space-between" }}
+        > */}
+        <CardHeader title={Name} subheader={`Last seen: ${LastSeen}`} />
+        {/* <Card sx={{ maxWidth: 350 }}>
       <box
         display="inline-block"
         gridTemplateColumns="repeat(auto-fill.50px)"
         gap={2}
         sx={{ justifyContent: "space-between" }}
       >
-        <CardHeader title="Erez Segev" subheader="September 14, 2016" />
+        <CardHeader title="Erez Segev" subheader="September 14, 2016" /> */}
         <Typography
           mr={3}
           sx={{
@@ -86,134 +113,42 @@ export default function UserCards() {
             fontWeight: "medium",
           }}
         >
-          24
+          {Age}
         </Typography>
-      </box>
-      <CardMedia
-        component="img"
-        height="194"
-        image="https://cdn.stocksnap.io/img-thumbs/960w/confident-business_ZMIFYSYFK8.jpg"
-        alt="user_pic"
-      />
-      <CardContent style={{ padding: 7 }}>
-        <Typography sx={{ m: 0.5 }} variant="body2" color="text.secondary">
-          <h3>Fetch me for:</h3>
-        </Typography>
-        <Box
-          sx={{
-            margin: 0.5,
-            width: 0.999,
-            //  border: 1,
-            p: 1,
-            display: "block",
-          }}
-        >
-          <Chip
-            icon={<CoffeeIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Coffee"
-          />
-          <Chip
-            icon={<SportsBarIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Beers"
-            padding={10}
-          />
-          <Chip
-            icon={<FitnessCenterIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Workout"
-          />
-          <Chip
-            icon={<AccountBalanceIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Attraction"
-          />
-          <Chip
-            icon={<DinnerDiningIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Eating out"
-          />
-          <Chip
-            icon={<StorefrontIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Market"
-          />
-          <Chip
-            icon={<ThumbUpIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Fetch me for anything"
-          />
+        {/* </box> */}
+        <CardMedia
+          component="img"
+          height="194"
+          image={ProfilePicture}
+          alt={Name}
+        />
+        <CardContent style={{ padding: 7 }}>
+          <Typography sx={{ m: 0.5 }} variant="body2" color="text.secondary">
+            Fetch me for:
+          </Typography>
+          <Box
+            sx={{
+              margin: 0.5,
+              width: 0.999,
+              //  border: 1,
+              p: 1,
+              display: "block",
+            }}
+          >
+            {Activities.map((activity) => (
+              <ActivityChip activity={activity} />
+            ))}
+          </Box>
+        </CardContent>
+        <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
+          <CardActions disableSpacing>
+            <Button align="center" onClick={handleClickOpen}>
+              Get To Know Me
+            </Button>
+          </CardActions>
+          <SimpleDialog open={open} onClose={handleClose} />
         </Box>
-        <Box
-          sx={{
-            margin: 0.5,
-            width: 0.999,
-            //  border: 1,
-            p: 1,
-            display: "block",
-          }}
-        >
-          <Chip
-            icon={<CoffeeIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Coffee"
-          />
-          <Chip
-            icon={<SportsBarIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Beers"
-            padding={10}
-          />
-          <Chip
-            icon={<FitnessCenterIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Workout"
-          />
-          <Chip
-            icon={<AccountBalanceIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Attraction"
-          />
-          <Chip
-            icon={<DinnerDiningIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Eating out"
-          />
-          <Chip
-            icon={<StorefrontIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Market"
-          />
-          <Chip
-            icon={<ThumbUpIcon />}
-            sx={{ m: 0.5 }}
-            size="small"
-            label="Anything"
-          />
-        </Box>
-      </CardContent>
-      <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
-        <CardActions disableSpacing>
-          <Button variant="outlined" align="center" onClick={handleClickOpen}>
-            Get To Know Me
-          </Button>
-        </CardActions>
-        <SimpleDialog open={open} onClose={handleClose} />
-      </Box>
-    </Card>
+      </Card>
+    </ListItem>
   );
 }
