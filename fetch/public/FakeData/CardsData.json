@@ -4,7 +4,7 @@
       "UserName": "Brooke",
       "Age": "25",
       "LastSeen": "07/05/2022",
-      "ProfilePicture": "./FakeData/avatars/Gal.jpg",
+      "ProfilePicture": "./FakeData/imgs/Brooke.jpg",
       "Activities": ["Coffee", "Beers", "Eating"],
       "Id": "001"
     },

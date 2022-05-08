@@ -41,7 +41,7 @@ function Add() {
         alignItems={"center"}
         justifyContent={"center"}
         textAlign={"center"}
-        fontSize={20}
+        fontSize={16}
       >
         Dates To Be Fetched
       </Typography>
@@ -74,7 +74,7 @@ function Add() {
         alignItems={"center"}
         justifyContent={"center"}
         textAlign={"center"}
-        fontSize={20}
+        fontSize={16}
       >
         What are you up to do?
       </Typography>
@@ -97,9 +97,9 @@ function Add() {
         alignItems={"center"}
         justifyContent={"center"}
         textAlign={"center"}
-        fontSize={20}
+        fontSize={16}
       >
-        Write About Your Fetching Self
+        Tell people more about the activites
       </Typography>
 
       <Box
@@ -114,10 +114,10 @@ function Add() {
         autoComplete="off"
       >
         <TextField
-          name="Write About Your Fetching Self"
+          name="Tell people more about the activites"
           id="standard-textarea"
-          label="About You"
-          placeholder="About You"
+          label="Recomended"
+          placeholder="Recomended"
           maxRows={5}
           multiline
           variant="standard"
@@ -142,7 +142,7 @@ function Add() {
           onClose={handleClose}
           aria-describedby="alert-dialog-slide-description"
         >
-          <DialogTitle>{"You are Up for a Meeting!"}</DialogTitle>
+          <DialogTitle>{"Available to Fetch!"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
               We made your suggestion for a fetching event! Make sure to check
@@ -150,7 +150,10 @@ function Add() {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={(event) => (window.location.href = "/Browse")}>
+            <Button
+              variant="contained"
+              onClick={(event) => (window.location.href = "/Browse")}
+            >
               Continue To Browse
             </Button>
           </DialogActions>

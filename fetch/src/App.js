@@ -6,8 +6,9 @@ import MenuAppBar from "./Components/MenuAppBar";
 import { createTheme, colors, ThemeProvider } from "@mui/material";
 const theme = createTheme({
   palette: {
-    primary: { main: "#ee964bff" },
-    secondary: { main: "#4ba3ee" },
+    primary: { main: "#eeb14b" },
+    secondary: { main: "#4b88ee" },
+    error: { main: "#88d8b0" },
   },
 });
 // const theme = createTheme({

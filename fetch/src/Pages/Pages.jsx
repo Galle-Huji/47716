@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Browse from "./Browse";
 import Chats from "./Chats";
 import Add from "./Add";
+import Meeting from "./Meeting";
 import SignIn from "./SignIn";
 // import SignUp from "./SignUp";
 import TouristOrLocal from "./TouristOrLocal";

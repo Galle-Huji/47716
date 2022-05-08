@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Chip from '@mui/material/Chip';
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import Chip from "@mui/material/Chip";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -20,13 +20,13 @@ const MenuProps = {
 };
 
 const activities = [
-  'Coffee',
-  'Beers',
-  'Workout',
-  'Attraction',
-  'Eating',
-  'Market',
-  'Anything',
+  "Coffee",
+  "Beers",
+  "Workout",
+  "Attraction",
+  "Eating",
+  "Market",
+  "Anything",
 ];
 
 function getStyles(activities, personactivities, theme) {
@@ -48,18 +48,17 @@ export default function SelectChips() {
     } = event;
     setPersonactivities(
       // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
+      typeof value === "string" ? value.split(",") : value
     );
   };
 
   return (
     <div>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"> 
+      <Box display="flex" justifyContent="center" alignItems="center">
         <FormControl sx={{ m: 1, width: 275 }}>
-          <InputLabel id="demo-multiple-chip-label">Activities</InputLabel>
+          <InputLabel id="demo-multiple-chip-label">
+            Choose ativities
+          </InputLabel>
           <Select
             labelId="demo-multiple-chip-label"
             id="demo-multiple-chip"
@@ -68,9 +67,9 @@ export default function SelectChips() {
             onChange={handleChange}
             input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
             renderValue={(selected) => (
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
                 {selected.map((value) => (
-                  <Chip key={value} label={value} />
+                  <Chip key={value} label={value} color="error" />
                 ))}
               </Box>
             )}
