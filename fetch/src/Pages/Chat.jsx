@@ -26,8 +26,8 @@ function Chat() {
           alignItems="flex-start"
         >
           <Avatar
-            alt="Remy Sharp"
-            src="/FakeData/avatars/gal.jpg"
+            alt="Trung"
+            src="/FakeData/imgs/Trung.jpg"
             sx={{ width: 50, height: 50 }}
           />
           <box>
@@ -39,7 +39,7 @@ function Chat() {
               }}
             >
               {" "}
-              Want to meet Gal?
+              Want to meet Trung?
             </Typography>
             <Typography
               sx={{
@@ -197,7 +197,7 @@ function Chat() {
           }}
         />
         <SendIcon
-          color="secondary"
+          color="primary"
           sx={{
             position: "fixed",
             bottom: 80,
@@ -208,7 +208,7 @@ function Chat() {
       <Fab
         size="small"
         variant="extended"
-        color="secondary"
+        color="primary"
         aria-label="add"
         onClick= {event =>  window.location.href='/Meeting'}
         sx={{

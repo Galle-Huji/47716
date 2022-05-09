@@ -1,4 +1,4 @@
-import { List } from "@mui/material";
+import { List, Typography } from "@mui/material";
 import UserCards from "../Components/UserCards";
 import React, { useEffect, useState } from "react";
 import { Box } from "@mui/system";
@@ -35,6 +35,9 @@ function Browse() {
           justify="center"
           style={{ minHeight: "100vh" }}
         >
+          <Typography variant="h6"
+          sx={{mt:2,}}
+          >Fetch Locals</Typography>
           <Grid item xs={3}>
             <List
               sx={{

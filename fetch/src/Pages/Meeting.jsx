@@ -104,8 +104,9 @@ export default function Meeting() {
                 alignItems={'left'}
                 justifyContent={'left'}
                 textAlign={'left'}
-                fontSize={18}>
-                To see the event details you can go to 'My Meetings' in the menu-bar
+                variant="h5">
+                That's so Fetch!!!
+                
             </Typography>
                 <Typography
                 display={'flex'}
@@ -113,8 +114,8 @@ export default function Meeting() {
                 alignItems={'left'}
                 justifyContent={'left'}
                 textAlign={'left'}
-                fontSize={18}>A calendar invitation will be
-                generated and sent to both of you.                
+                fontSize={18}>
+                You're going to enjoy coffee together, awesome!               
             </Typography>
             <Typography
                 display={'flex'}
@@ -122,10 +123,9 @@ export default function Meeting() {
                 alignItems={'left'}
                 justifyContent={'left'}
                 textAlign={'left'}
-                fontSize={18}>              
-                Some time after the system will
-                send a follow-up message asking
-                how was it.
+                fontSize={18}>   
+                <br/>         
+                feel free to keep chatting.
             </Typography>
 
                 </DialogContentText>

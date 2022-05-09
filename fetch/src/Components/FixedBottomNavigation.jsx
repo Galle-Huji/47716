@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 export default function FixedBottomNavigation() {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(2);
   const ref = React.useRef(null);
 
   return (
