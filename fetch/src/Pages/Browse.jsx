@@ -11,11 +11,14 @@ function Browse() {
   }, []);
 
   const getCardsData = async () => {
-    const response = await fetch(`./FakeData/CardsData.json`);
+    const response = await fetch(`./FakeData/UsersData.json`);
+    // const rawData = await response.text();
+    // const data = JSON.parse(rawData);
+    // console.log(rawData);
+    // console.log(data);
     const data = await response.json();
-    setCardsData(data.Cards);
+    setCardsData(data.Users);
   };
-  console.log(CardsData);
 
   return (
     <div>
@@ -45,14 +48,14 @@ function Browse() {
               }}
             >
               {CardsData.map((card) => (
-                <div key={card.Id}>
+                <div key={card.UserId}>
                   <UserCards
                     Name={card.UserName}
                     Age={card.Age}
                     LastSeen={card.LastSeen}
                     ProfilePicture={card.ProfilePicture}
                     Activities={card.Activities}
-                    Id={card.Id}
+                    UserId={card.UserId}
                   />
                   <br />
                 </div>

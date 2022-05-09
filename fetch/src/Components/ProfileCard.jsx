@@ -16,17 +16,48 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
 
-function ProfileCard() {
-  const [ProfilePictures, setProfilePictures] = useState([]);
+function ProfileCard({ userId }) {
+  const [userData, setUsersData] = useState([]);
+  const [profilePictures, setProfilePictures] = useState([]);
   useEffect(() => {
     getProfilePictures();
+    getUserData();
   }, []);
 
+  const getUserData = async () => {
+    const response = await fetch(`./FakeData/UsersData.json`);
+    const data = await response.json();
+    console.log(data);
+    const users = data.Users;
+    console.log(users);
+
+    for (var i in users) {
+      // console.log(users[i]);
+      if (users[i].UserId == userId) {
+        // console.log(`found user ${userId}`);
+        // console.log(users[i]);
+        setUsersData(users[i]);
+      }
+    }
+  };
+
   const getProfilePictures = async () => {
+    console.log("getting profile pictures");
     const response = await fetch(`./FakeData/ProfilePictures.json`);
     const data = await response.json();
     setProfilePictures(data.ProfilePictures);
   };
+
+  let hobbies = [];
+  for (let i in userData.Hobbies) {
+    console.log(userData.Hobbies[i]);
+    hobbies.push(userData.Hobbies[i]);
+  }
+
+  let history = [];
+  for (let i in userData.History) {
+    history.push(userData.History[i]);
+  }
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -36,7 +67,7 @@ function ProfileCard() {
           rewind: true,
         }}
       >
-        {ProfilePictures.map((pic) => (
+        {profilePictures.map((pic) => (
           <SplideSlide>
             <CardMedia
               component="img"
@@ -54,64 +85,57 @@ function ProfileCard() {
                 backgroundColor: "rgba(0, 0, 0, 0.2)",
               }}
             >
-              The Fetch Team
+              {userData.UserName}
             </Typography>
           </SplideSlide>
         ))}
       </Splide>
       <CardContent style={{ padding: 7 }}>
-        <Typography variant="body2" color="text.secondary">
-          <h3>About me:</h3>
-          <h4>Can’t seem to recall where I stole this bio from or why.</h4>
+        <Typography color="text.secondary">
+          <h4>About me:</h4>
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography color="text.secondary" variant="body2">
+          {userData.Bio}
+        </Typography>
+        <Typography color="text.secondary">
           <br />
-          <h3>Hobbies:</h3>
+          <h4>Hobbies:</h4>
         </Typography>
         <Box
-          sx={{
-            margin: 0.5,
-            width: 0.999,
-            //  border: 1,
-            p: 1,
-            display: "block",
-          }}
+        // sx={{
+        //   width: 0.999,
+        //   display: "block",
+        //   border: 0.5,
+        // }}
         >
-          <Chip icon={<CoffeeIcon />} size="small" label="Coffee" />
-          <Chip icon={<CoffeeIcon />} size="small" label="Coffee" />
-          <Chip icon={<CoffeeIcon />} size="small" label="Coffee" />
-          <Chip icon={<CoffeeIcon />} size="small" label="Coffee" />
-          <Chip icon={<CoffeeIcon />} size="small" label="Coffee" />
-          <Typography variant="body2" color="text.secondary">
+          {hobbies.map((hobby) => (
+            <Chip label={hobby} size="small" sx={{ m: 0.5 }} />
+          ))}
+          <Typography color="text.secondary">
             <br />
-            <h3>Fetches made happen:</h3>
+            <h4>Fetches made happen:</h4>
           </Typography>
-          <List dense="True">
-            <ListItem>
-              <ListItemIcon>
-                <CoffeeIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <Typography variant="body2" color="text.secondary">
-                    <h4>Fetched coffee with Yoav</h4>
-                  </Typography>
-                }
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <SportsBarIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <Typography variant="body2" color="text.secondary">
-                    <h4>Fetched beer with Inbar</h4>
-                  </Typography>
-                }
-              />
-            </ListItem>
-          </List>
+          <Box>
+            <List dense={true}>
+              {history.map((item) => (
+                <ListItem
+                  disablePadding
+                  sx={{
+                    textAlign: "left",
+                  }}
+                >
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography color="text.secondary" variant="body2">
+                        {item}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center">
           <Button component={Link} to="/chat" variant="contained">
