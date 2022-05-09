@@ -146,7 +146,7 @@ export default function UserCards({
         </CardContent>
         <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
           <CardActions disableSpacing>
-            <Button variant="outlined" align="center" onClick={handleClickOpen}>
+            <Button align="center" onClick={handleClickOpen} variant="contained">
               Get To Know Me
             </Button>
           </CardActions>

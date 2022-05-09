@@ -1,8 +1,6 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
@@ -12,8 +10,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-// import { FacebookLoginButton } from "react-social-login-buttons";
+import { FacebookLoginButton } from "react-social-login-buttons";
+import { InstagramLoginButton } from "react-social-login-buttons";
+import styled, { css } from "styled-components";
+import { WindowsFilled } from "@ant-design/icons";
 
 function Copyright(props) {
   return (
@@ -39,11 +39,17 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
   };
+
+  const Wrapper = styled.div`
+    @media only screen and (max-width: 399px) {
+      width: 10%;
+    }
+  `;
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,66 +57,55 @@ export default function SignIn() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 2,
+            marginBottom: 3,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
+          </Avatar> */}
+          <img src="./logo.png" alt="" width="250" height="auto" />
+          {/* <Typography variant="h3" mb={3} fontSize>
             Sign in
-          </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-              onClick={(event) => (window.location.href = "/TouristOrLocal")}
-            >
-              Sign In
-            </Button>
+          </Typography> */}
+          <Box sx={{ mt: 1 }}>
+            <Typography variant="h4" align="center" mb={1}>
+              We care about you!
+            </Typography>
+            <Typography fontSize={14} align="center" mb={1}>
+              Safety is first, so please log in with a social media acount.
+              Don't worry, you don't have to share your social media info with
+              users.
+            </Typography>
             <Grid container>
               <Grid item xs>
-                <Link href="/SignUp" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
+                <Box mb={2}>
+                  <FacebookLoginButton
+                    onClick={(event) => (window.location.href = "/citySelect")}
+                    align="center"
+                  >
+                    <span>Sign in with Facebook</span>
+                  </FacebookLoginButton>
+                </Box>
+
+                <InstagramLoginButton
+                  align="center"
+                  onClick={(event) => (window.location.href = "/citySelect")}
+                >
+                  <span>Sign in with Instagram</span>
+                </InstagramLoginButton>
               </Grid>
             </Grid>
           </Box>
         </Box>
+        <FormControlLabel
+          mt={3}
+          control={<Checkbox value="remember" color="primary" />}
+          label="Remember me"
+        />
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>

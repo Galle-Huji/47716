@@ -8,15 +8,15 @@
     },
     {
       "ChatTitle": "Fetch a museum visit @ IMJ",
-      "ChatMembers": "Avigail",
+      "ChatMembers": "Ahmed",
       "LastMessege": " - Sure",
-      "ProfilePicture": "./FakeData/avatars/Avigail.jpg"
+      "ProfilePicture": "./FakeData/avatars/Ahmed.jpg"
     },
     {
       "ChatTitle": "Fetch dinner @ city center",
-      "ChatMembers": "Gal",
+      "ChatMembers": "priscilla",
       "LastMessege": " - Honeydew does belong in a fruit salad",
-      "ProfilePicture": "./FakeData/avatars/Gal.jpg"
+      "ProfilePicture": "./FakeData/avatars/priscilla.jpg"
     },
     {
       "ChatTitle": "Fetch a coffee @ city center",
@@ -26,9 +26,9 @@
     },
     {
       "ChatTitle": "Fetch a workout @ YMCA",
-      "ChatMembers": "Eran",
+      "ChatMembers": "irene",
       "LastMessege": " - On Wednesdays I do legs",
-      "ProfilePicture": "./FakeData/avatars/Eran.jpg"
+      "ProfilePicture": "./FakeData/avatars/irene.jpg"
     },
     {
       "ChatTitle": "Fetch a beer @ WineBar",
@@ -38,33 +38,33 @@
     },
     {
       "ChatTitle": "Fetch breakfast @ Talbiya",
-      "ChatMembers": "Hadar",
+      "ChatMembers": "lucas",
       "LastMessege": " - Around 10-ish",
-      "ProfilePicture": "img source"
+      "ProfilePicture": "/FakeData/avatars/lucas.jpg"
     },
     {
       "ChatTitle": "Fetch a bowling game",
-      "ChatMembers": "Omri",
+      "ChatMembers": "Dan",
       "LastMessege": " - Okay, cool. Call me when you're there",
-      "ProfilePicture": "img source"
+      "ProfilePicture": "/FakeData/avatars/Dan.jpg"
     },
     {
       "ChatTitle": "Fetch a pool game @ City center",
-      "ChatMembers": "Ben",
+      "ChatMembers": "Eden",
       "LastMessege": " - loser buys the winner a drink",
-      "ProfilePicture": "./FakeData/avatars/Ben.jpg"
+      "ProfilePicture": "./FakeData/avatars/Eden.jpg"
     },
     {
       "ChatTitle": "Fetch a workout @ HaBlock",
-      "ChatMembers": "Bar",
+      "ChatMembers": "panitan",
       "LastMessege": " - Nobody reads this one before last message anyway",
-      "ProfilePicture": "./FakeData/avatars/Bar.jpg"
+      "ProfilePicture": "./FakeData/avatars/panitan.jpg"
     },
     {
       "ChatTitle": "Fetch a party @ City center",
-      "ChatMembers": "Netta",
+      "ChatMembers": "lucas",
       "LastMessege": " - Text me what you'll be wearing so I can recognize you",
-      "ProfilePicture": "./FakeData/avatars/Netta.jpg"
+      "ProfilePicture": "./FakeData/avatars/lucas.jpg"
     }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.8.3",
+    "@chatscope/chat-ui-kit-styles": "^1.2.3",
+    "react-chat-elements": "^11.0.1",
+    "react-social-login-buttons": "^3.6.0"
+  }
+}

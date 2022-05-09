@@ -20,6 +20,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Divider from "@mui/material/Divider";
 import { Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 export default function MenuAppBar(props) {
   const [auth, setAuth] = React.useState(true);
@@ -110,7 +111,7 @@ export default function MenuAppBar(props) {
               </IconButton>
             </Grid>
             <Grid xs={2} item>
-              <img src="./FakeData/Bolt_logo.svg" alt="" />
+              <img src="./logo.png" alt="" width="70" height="auto" />
             </Grid>
             <Grid xs={1} item>
               {auth && (
@@ -122,6 +123,7 @@ export default function MenuAppBar(props) {
                       aria-controls="menu-appbar"
                       aria-haspopup="true"
                       color="inherit"
+                      component={Link} to="/Profile"
                     >
                       <AccountCircle />
                     </IconButton>
