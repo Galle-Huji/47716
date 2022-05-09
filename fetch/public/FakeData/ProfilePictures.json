@@ -1,24 +1,24 @@
 {
   "ProfilePictures": [
     {
-      "PictureTitle": "Gal",
+      "PictureTitle": "1",
       "Type": ".jpg",
-      "Path": "./FakeData/avatars/Gal.jpg"
+      "Path": "./FakeData/imgs/lucas/StockSnap_3LMPSCJQGQ.jpg"
     },
     {
-      "PictureTitle": "Yoav",
+      "PictureTitle": "2",
       "Type": ".jpg",
-      "Path": "./FakeData/avatars/Yoav.jpg"
+      "Path": "./FakeData/imgs/lucas/StockSnap_EDPB9ROQBZ.jpg"
     },
     {
-      "PictureTitle": "Inbar",
+      "PictureTitle": "3",
       "Type": ".jpg",
-      "Path": "./FakeData/avatars/Inbar.jpg"
+      "Path": "./FakeData/imgs/lucas/StockSnap_OSUOR6WBMX.jpg"
     },
     {
-      "PictureTitle": "Hadar",
+      "PictureTitle": "4",
       "Type": ".jpg",
-      "Path": "./FakeData/avatars/Hadar.jpg"
+      "Path": "./FakeData/imgs/lucas/lucas.jpg"
     }
   ]
 }

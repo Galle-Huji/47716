@@ -109,7 +109,7 @@ function ProfileCard({ userId }) {
         // }}
         >
           {hobbies.map((hobby) => (
-            <Chip label={hobby} size="small" sx={{ m: 0.5 }} />
+            <Chip color='error' label={hobby} size="small" sx={{ m: 0.5 }} />
           ))}
           <Typography color="text.secondary">
             <br />

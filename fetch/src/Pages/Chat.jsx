@@ -27,7 +27,7 @@ function Chat() {
         >
           <Avatar
             alt="Trung"
-            src="/FakeData/imgs/Trung.jpg"
+            src="./FakeData/imgs/lucas/lucas.jpg"
             sx={{ width: 50, height: 50 }}
           />
           <box>
@@ -39,7 +39,7 @@ function Chat() {
               }}
             >
               {" "}
-              Want to meet Trung?
+              Want to meet Lucas?
             </Typography>
             <Typography
               sx={{
